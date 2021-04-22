@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr1 = [10,20,30,40,50,60];
+         var arr2 = {
+            0:10,
+             1:20,
+             2:30,
+            3:40,
+             4:50,
+             5:60,
+             length:6,
+             map: function(callback){
+                 var temp = [];
+                 for(var i=0; i<this.length;i++){
+                     var val = callback(this[i]);
+                     temp[i] = val;
+             }
+             return temp; // function return 값이 들어가야한다 필수인가?
+          }
+         }
+
+         var result = arr1.map(function(item){return item *2;});
+
+         var result2 = arr2.map(function(item){
+             return item * 2; //return 받으면 그 함수 전체값이 리턴값이 된다.
+             // = 이붙어야한다
+         });
+
+         console.log('result : '+result);
+         console.log('result2 : '+result2);
+         console.log(arr2);
+        console.log(arr1);
+        </script>
+</body>
+</html>

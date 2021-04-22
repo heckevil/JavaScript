@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr2 = [10,20,30,40];
+        var result = arr2.map(function(item){
+            if(item >= 30){
+                return item *2;
+            }
+            return item
+            });
+// map 이란 놈은 배열 모두를 item에 그대로 다쏴준다 그리고
+// 리턴값으로 다시또 배열을 만들어주는 착한놈, if문도 걸수 있다
+
+        function myMap(item){
+        return item - 2;
+        }
+        var result2 =arr2.map(myMap);
+
+        console.log(result);
+        console.log(result2);
+
+        //비파괴 매소드
+    </script>
+</body>
+</html>

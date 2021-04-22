@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        //통신함수(setTime)은 무조건 Promise로 감싼다
+      var pro1 = new Promise(function (resolve, reject) {
+        setTimeout(function () {
+          resolve(1);
+          //resolve 잘 해결됫을때 쓰는 함수
+          //reject 중간에 에러가 떻을때 쓰는 함수
+
+        }, 5000);
+      });
+
+      var pro1 = new Promise(function (resolve) {
+        setTimeout(function () {
+          resolve(2);
+        }, 3000);
+      });
+
+      pro1.then(function (res) {
+        console.log("pro1 : " + res);
+      });
+
+      pro2.then(function (res) {
+        console.log("pro2 : " + res);
+      });
+
+      //.then(fumction(res)) res값에는 resolve안에 값이 들어온다
+      //reject는 .catch(값)으로 받는다 예외처리할때.
+      
+    </script>
+  </body>
+</html>

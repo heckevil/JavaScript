@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = [1,2,3,4,5,6,7,8];
+
+        // var result = arr.filter(function(item){
+        //     return ture;
+        // })
+
+        var result = arr.filter(function(item){
+         if(item%2 != 0){
+             return true;
+         }
+          return false;
+         })
+        // filter 리턴값이 true면 그대로 쏴주고 false면 쏴주지 않는다
+        // map은 무조건 원본이랑 방갯수가 같고
+        //filter은 다를수도 있다.
+
+        console.log(result);
+    </script>
+</body>
+</html>

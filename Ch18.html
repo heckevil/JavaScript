@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      setTimeout(function () {
+        console.log("안녕~~~");
+      }, 3000);
+      //setTimeout(함수(값),미리세컨드) 함수(값)을 미리세컨드
+      // 기다린뒤에 실행 1초=1000
+      setTimeout(function () {
+        console.log("hello");
+      }, 1000);
+      //자바는 순서대로 실행
+      //자바는 싱글스레드라 셋타임 트리거만 실행후
+       //짧게 걸린거 먼저 실행하고 시간이 되면 함수(값)실행
+      // 고로 hello먼저 찍히고 안녕이 실행됨
+    </script>
+  </body>
+</html>

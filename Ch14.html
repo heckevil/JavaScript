@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = [];
+        arr.push(10);
+        arr.push(20); // arraylist.add 와 같은기능 0번자리부터 순차적으로 채움
+        arr.push(30);
+        arr.push(40);
+
+        arr.shift();
+        arr.shift();
+        //0번자리부터 내용물을 날림  2번 썼으니 0번 1번 자리 날아감
+        //뒤에서 부터 날릴떄는 arr.length 로 배열 자리 제한하여 날릴것
+
+        arr.pop(); //뒤에서 한자리 날림
+
+        arr.unshift(12);//0번자리 삽입
+        arr.splice(2,1); // 2번방에 있는거 1개 지움. splice(방번호~,갯수)
+        console.log(arr);
+    </script>
+</body>
+</html>

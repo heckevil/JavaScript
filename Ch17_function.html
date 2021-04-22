@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function sum(n1 = 10) {
+        console.log(n1);
+      }
+      sum();
+      //function sum(n1 = 10) 디폴트값이 10
+      sum(10, 20);
+      //이름만 맞아도 호출 가능, 파라미터가 달라도 호출 가능 심지어 제대로 들어감
+      console.log("-------------------");
+
+      function sumAll(callback) {
+        var sum;
+        for (var i = 0; i < arguments.length; i++) {
+          sum = sum + arguments[i];
+        }
+
+        function sumAll2(...args){
+            for (var i = 0; i < arguments.length; i++) {
+          sum = sum + args[i];
+        }
+        }
+
+        console.log(sum);
+      }
+
+      sumAll(1); //1  //arguments.length =1 //arguments[0] =1
+      sumAll(1, 5); //6  //arguments.length =2
+      sumAll(1, 5, 7); //13  //arguments.length =3
+      //()사이값 보낼땐 arguments, 들어올땐 Parameter
+    </script>
+  </body>
+</html>

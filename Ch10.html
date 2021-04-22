@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obj = {
+            name : '홍길동',
+            age: 30,
+            run: function(){
+                console.log('%s이 달린다.',this.name);
+            }
+        }; //이게 객체만들기
+        //멤버 필드 밖에 없다. 멤버 매소드, 생성자 존재하지 않음 멤버 필드로 모두 처리
+        console.log(obj);
+        obj.run();
+        obj.name = '하나';
+        obj.run();
+        
+
+        var sum = function(n1,n2){
+            return n1+n2;
+        }
+
+        function sum2(n1, n2){
+            return n1 + n2;
+        }
+
+
+    </script>
+</body>
+</html>

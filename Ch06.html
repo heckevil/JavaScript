@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var result = 10 && 0;
+        console.log(result);
+//&& 연잔자는 앞에 숫자가 true라고 해도 뒤에도 물어봄 그래서 순서상 12가 마지막 true
+ // false값이 껴있다면 false의 값이 들어감       
+
+result = 10 || 12;
+// ||연산자는 앞에가 true면 뒤에 안물어보고 뒤에 바로 출력       
+        console.log(result);
+
+        var a = 'hello';
+        var b = '';
+        console.log(a||b);
+        // 둘중 한군데에 값이 있으면 출력 없으면 출력 안함(빈값 = false)
+    </script>
+</body>
+</html>

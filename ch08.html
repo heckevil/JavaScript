@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sum(n1,n2){
+            return n1+n2;
+        }
+
+        function sum(n1,n2){
+            return n1;
+        } // 오버로딩 안댐 밑에 펑션이 덮에 씌워져서 이전껀 날아간다
+
+        function sum2(n1,n2){
+            console.log('sum2 : %d', n1+n2); // 리턴은 필수가 아니다.
+        }
+        var result = sum(10,20);
+        console.log('%s = %d', 'result',result);
+        
+        result = sum2(11,22);
+        console.log(result);
+         // 리턴값이 없어서 undifned 값이 들어감. 이럴때 retrun 이 필요하다
+        console.log('%s = %d', 'result',result);
+    </script>
+    
+</body>
+</html>

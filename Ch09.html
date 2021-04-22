@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calc(cal,n1,n2){
+            return cal(n1,n2)
+        }
+
+        function sum(num1,num2){
+            return num1 + num2
+        }
+
+        function minus(num1,num2){
+            return num1-num2;
+        }
+        var result = calc(sum,10,20);
+        console.log('result = %d',result);
+        console.log('result = %d',calc(minus,20,10));
+
+        var methodSum = sum;
+        console.log('result = %d',methodsum(20,10));
+        var methodSum = minus;
+        console.log('result = %d',methodsum(20,10));
+        
+    </script>
+</body>
+</html>
